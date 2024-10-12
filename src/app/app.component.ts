@@ -11,3 +11,8 @@ import { RouterOutlet } from '@angular/router';
 export class AppComponent {
   title = 'to-do-list-app';
 }
+<!-- src/app/app.component.html -->
+<div class="app">
+  <app-task-form (taskUpdated)="loadTasks()"></app-task-form>
+  <app-task-list></app-task-list>
+</div>

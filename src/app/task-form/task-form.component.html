@@ -1,0 +1,11 @@
+<p>task-form works!</p>
+<!-- src/app/task-form/task-form.component.html -->
+<div class="task-form">
+    <h2>{{ task.id ? 'Edit Task' : 'Add Task' }}</h2>
+    <form (ngSubmit)="saveTask()">
+      <input type="text" [(ngModel)]="task.title" name="title" placeholder="Task Title" required />
+      <input type="text" [(ngModel)]="task.description" name="description" placeholder="Task Description" />
+      <button type="submit">{{ task.id ? 'Update' : 'Add' }}</button>
+    </form>
+  </div>
+  
